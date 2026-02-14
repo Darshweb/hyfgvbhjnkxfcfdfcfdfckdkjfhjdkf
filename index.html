@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTORA AI | Your Personal Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="auth-container" class="container">
+            <h1>ACTORA AI</h1>
+            <div id="auth-forms">
+                <div id="login-form">
+                    <h2>Login</h2>
+                    <input type="text" id="login-user" placeholder="Username">
+                    <button onclick="login()">Enter ACTORA</button>
+                    <p>New here? <span onclick="toggleAuth()">Create an account</span></p>
+                </div>
+                <div id="signup-form" class="hidden">
+                    <h2>Join ACTORA</h2>
+                    <input type="text" id="signup-name" placeholder="Your Name">
+                    <input type="text" id="signup-user" placeholder="Create Username">
+                    <button onclick="signup()">Sign Up</button>
+                    <p>Already have an account? <span onclick="toggleAuth()">Login</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="chat-container" class="container hidden">
+            <header>
+                <h2 id="welcome-msg">Hello, User</h2>
+                <button onclick="logout()" class="btn-small">Logout</button>
+            </header>
+            <div id="chat-window">
+                </div>
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Ask ACTORA anything...">
+                <button id="send-btn" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
